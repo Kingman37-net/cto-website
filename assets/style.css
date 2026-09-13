@@ -1441,3 +1441,31 @@ ul, ol { list-style: none; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   FOOTER LEGAL LINKS (Privacy / Terms / Cookies)
+   ========================================================= */
+
+.footer-legal-links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-legal-links a {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.footer-legal-links a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 960px) {
+  .footer-legal {
+    text-align: left;
+  }
+}
