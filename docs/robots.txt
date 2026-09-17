@@ -1,0 +1,8 @@
+# robots.txt for CTO KINGMAN KE
+# https://cto.kingmandigital.co.ke/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cto.kingmandigital.co.ke/sitemap.xml
