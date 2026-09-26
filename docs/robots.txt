@@ -4,17 +4,5 @@
 User-agent: *
 Allow: /
 
-# Public pages (indexed)
-Allow: /index.html
-Allow: /about.html
-Allow: /contact.html
-
-# Private pages (hidden from search)
-Disallow: /privacy.html
-Disallow: /terms.html
-Disallow: /cookies.html
-Disallow: /thank-you.html
-Disallow: /404.html
-
 # Sitemap
 Sitemap: https://cto.kingmandigital.co.ke/sitemap.xml
