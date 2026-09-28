@@ -4,5 +4,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Non-public / utility pages
+Disallow: /404.html
+Disallow: /thank-you/
+
+# Legal pages are intentionally noindex
+# and are therefore excluded from search indexing.
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: /cookies/
+
+# XML Sitemap
 Sitemap: https://cto.kingmandigital.co.ke/sitemap.xml

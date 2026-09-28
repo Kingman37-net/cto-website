@@ -1469,3 +1469,220 @@ ul, ol { list-style: none; }
     text-align: left;
   }
 }
+
+
+/* =========================================================
+   CTO KINGMAN KE — FINAL GLOBAL PATCH
+   Navigation, JS fallback, accessibility and motion fixes
+   ========================================================= */
+
+
+/* =========================
+   MENU STATE
+   ========================= */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+/* =========================
+   JAVASCRIPT FALLBACK
+   ========================= */
+
+/*
+   Content remains visible when JavaScript is unavailable.
+   Once JS loads, body.js-enabled activates the reveal system.
+*/
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+body.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+body.js-enabled .reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET NAVIGATION
+   ========================= */
+
+/*
+   Six navigation items need more room than the original
+   760px breakpoint allowed.
+*/
+
+@media (min-width: 761px) and (max-width: 920px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 10px 5%;
+
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity var(--transition),
+      visibility var(--transition),
+      transform var(--transition);
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.98rem;
+  }
+
+  .nav-menu a.active::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY / MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.js-enabled .reveal,
+  body.js-enabled .reveal.active {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   LEGAL PAGES
+   ========================================================= */
+
+.legal-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 130px 5% 80px;
+}
+
+.legal-page h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 12px;
+  color: var(--light);
+}
+
+.legal-page h1 span {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.legal-page .last-updated {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-page h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page p,
+.legal-page li {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.legal-page ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+
+.legal-page a {
+  color: var(--accent);
+}
+
+.legal-page code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--card-bg);
+  color: var(--accent);
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.legal-page .highlight-box {
+  background: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.legal-page .highlight-box p {
+  margin: 0;
+}
+
+.legal-disclaimer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .legal-page {
+    padding-top: 100px;
+  }
+}

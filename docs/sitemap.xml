@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
-    <loc>https://cto.kingmandigital.co.ke/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://cto.kingmandigital.co.ke/\</loc\>
+    <lastmod>2026-09-28</lastmod>
   </url>
 
+  <!-- About -->
   <url>
-    <loc>https://cto.kingmandigital.co.ke/about/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://cto.kingmandigital.co.ke/about/\</loc\>
+    <lastmod>2026-09-28</lastmod>
   </url>
 
+  <!-- Contact -->
   <url>
-    <loc>https://cto.kingmandigital.co.ke/contact/</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://cto.kingmandigital.co.ke/contact/\</loc\>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+
+  <!-- Journal -->
+  <url>
+    <loc>https://cto.kingmandigital.co.ke/journal/\</loc\>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+
+  <!-- Resources -->
+  <url>
+    <loc>https://cto.kingmandigital.co.ke/resources/\</loc\>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+
+  <!-- Work / Portfolio -->
+  <url>
+    <loc>https://cto.kingmandigital.co.ke/work/\</loc\>
+    <lastmod>2026-09-28</lastmod>
   </url>
 
 </urlset>
