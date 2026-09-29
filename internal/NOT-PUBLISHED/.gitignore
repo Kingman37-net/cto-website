@@ -1,0 +1,22 @@
+# Local secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+
+# Private credentials/configuration
+secrets/
+credentials/
+private-keys/
+
+# Temporary/internal machine files
+*.tmp
+*.temp
+*.swp
+.DS_Store
+
+# Local exports
+exports/
